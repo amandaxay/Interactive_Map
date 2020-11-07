@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-07T01:04:00.591Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="viiQ_Duub8j09I2EdJgd" version="13.9.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-07T02:29:34.436Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="Pq0vyvh93Z_5Ty2X-97q" version="13.9.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1185" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -79,8 +79,10 @@
             <mxPoint x="400.3103448275863" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KRUcjBzjKhA6vzqWpW5d-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KRUcjBzjKhA6vzqWpW5d-17" target="KRUcjBzjKhA6vzqWpW5d-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="KRUcjBzjKhA6vzqWpW5d-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="KRUcjBzjKhA6vzqWpW5d-15" target="KRUcjBzjKhA6vzqWpW5d-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KRUcjBzjKhA6vzqWpW5d-17" value="Create journal entry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="350" y="430" width="100" height="50" as="geometry" />
