@@ -12,8 +12,44 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 <!-- -->
 <style>
+#title{
+  posititon: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom:50px;
+}
+.js-nametag{
+  position: absolute;
+  font-size:60px;
+}
+.js-nametag:nth-child(1){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;  
+}
+
+
+.js-nametag:nth-child(2){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+@keyframes fade{
+    0%,50% {
+      opacity: 0;
+}
+    100%{
+      opacity: 1;
+  }
+}
+
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+form {border: 1px solid grey; border-radius: 25px; padding:10%;}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -25,7 +61,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #981e32;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -98,18 +134,19 @@ span.psw {
 		</ul>
 	</nav> -->
 	</header>
-	<div style="width:30%; border:2px solid white; border-bottom:2px solid black" id="container">
-		<h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Welcome</h3>
+
+	<div id="title" style="font-family: aileron, sans-serif; font-weight: 200; font-style: normal;">    
+		<h2 class="js-nametag">Welcome</h2>
+  		<h2 class="js-nametag">InMap: Interactive Map Journal</h2>
 	</div>
-	<br>
 	<br>
 	<div id="container">
 	<form action="index.html" method="post">
     	  <div class="container">
 		    <label for="uname"><b>Username:</b></label>
 		    <input type="text" placeholder="Enter Username" name="uname" required>
-		    <label for="psw"><b>Password:</b></label>
 		    <br>
+		    <label for="psw"><b>Password:</b></label>
 		    <input type="password" placeholder="Enter Password" name="psw" required>
 		    <button type="submit">Login</button>
   		</div>
