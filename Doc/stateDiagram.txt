@@ -1,0 +1,34 @@
+@startuml
+hide empty description
+[*] -> SignIn
+SignIn : DO:check username+password
+
+SignIn -> Map : access map
+Map : DO:display states
+
+Map -> State : click state
+State -up-> Map : back to map
+State : DO: List POI
+State : DO: List Previous entry within the state
+
+Map -> Journal : access prev journal entries
+Map -up-> SignIn : signout
+Journal -up-> Map : back to map
+Journal : DO: List prev journal entries
+Journal -up-> SignIn : signout
+
+State -down-> Entry : create entry
+Entry : DO: title
+Entry : DO: paragraph
+Entry -up-> State : cancel
+State -up-> SignIn : signout
+
+Entry -down-> Photo : add photo
+Photo : DO: get photo
+
+Photo -down-> Exit : save
+Entry -down-> Exit : save
+Photo -up-> Entry : cancel
+Exit -up-> SignIn : signout
+Exit -> State : return
+@enduml
