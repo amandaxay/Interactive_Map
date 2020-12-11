@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 database=[]
-#list=['OR','WA','CA']
+list=['OR','WA','CA']
 for state in list: #Remember to update the number of pages 
-    url = 'https://www.nps.gov/state/ca/index.htm'
+    url = 'https://www.nps.gov/state/'+state+'/index.htm'
     user_agent = {'User-agent': 'Mozilla/5.0'}
     response  = requests.get(url, headers = user_agent)
     #time.sleep(rand.randint(3,30)) 
