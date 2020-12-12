@@ -1,58 +1,73 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
- 	<title>InMap</title>
-	<link rel="icon" type="image/png" href="img/photo3.png" />
- 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-		<!-- Aileron bold -->
-	<link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-<!-- -->
+  <title>InMap</title>
+  <link rel="icon" type="image/png" href="img/photo3.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <!-- Aileron bold -->
+  <link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <!-- -->
 </head>
 <body>
+
+
 <div id="wrapper">
-	<header>
-<!-- put logo here if we want one -->
-	<!-- 	<div id="logo">
-		<br>
-		<figure>
-			<a href="index.html">
-				<img id="center" src="img/chopblock.png" alt="logo">
-			</a>
-		</figure>
-	</div> 
-	<br>-->
-	<nav> 
-		<ul> 
-			<li><a href="index.html">home</a></li>
-			<li><a href="journal.html">journal</a></li>
-			<li><a href="contact.html">report a bug</a></li>
-			<li><a href="landing.html">sign out</a></li>
-		</ul>
-	</nav>
-	</header>
-	<div style="width:30%; border:2px solid white; border-bottom:2px solid black" id="container">
-		<h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Your Journal</h3>
-	</div>
-	<br>
-	<div id="clicked-state"></div>
-	<div id="map" style="width: 300px; height: 300px;"></div>
-	<br>
-	<br>
-		<hr>
+  <header>
+    <!-- put logo here if we want one -->
+    <!-- 	<div id="logo">
+      <br>
+      <figure>
+        <a href="index.html">
+          <img id="center" src="img/chopblock.png" alt="logo">
+        </a>
+      </figure>
+    </div>
+    <br>-->
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="journal.html">journal</a></li>
+        <li><a href="contact.html">report a bug</a></li>
+        <li><a href="landing.html">sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div style="width:30%; border:2px solid white; border-bottom:2px solid black" id="container">
+    <h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Create Journal Entry</h3>
+  </div>
+  <br>
+
+
+  <div class="createJournal" style="width:60%;">
+    <form action="entry.php" method="post">
+      <label style="text-align:left;">Title</label>
+      <textarea type="text" name="title" rows="4" cols="50">
+    </textarea>
+      <label style="text-align:left;">Description</label>
+      <textarea type="text" name="description" rows="10" cols="50">
+    </textarea>
+      <br>
+      <input type="submit">
+    </form>
+  </div>
+  <br>
+  <br>
+  <hr>
 
 </div>
 <br><br><br><br><br><br><br><br><br><br>
 
 <footer>
-	<h5>
-		cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
-	</h5>
+  <h5>
+    cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
+  </h5>
 </footer>
 
+<script src="journal.js"></script>
 </body>
 </html>
