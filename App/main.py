@@ -25,7 +25,11 @@ def home():
     #                             total_pages=total_pages, 
     #                             curr_page=page,
     #                             advanced=False)
-    return render_template('landing_page.html') #if we arent given a query, render the landing page
+    return render_template('index.html') #if we arent given a query, render the landing page
+
+@app.route('/CAstatePage')
+def CAstate():
+    return render_template('/state_page.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
