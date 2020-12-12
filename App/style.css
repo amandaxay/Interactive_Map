@@ -168,6 +168,15 @@ img {
 	background-color:white;
 }
 
+
+.createJournal {
+  width: 90%;
+  /*	border:2px solid lightgray;*/
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color:white;
+}
+
 #colgrid {
 	display: grid;
 	text-align: left;
