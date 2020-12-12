@@ -18,6 +18,10 @@
 	body {	
 	line-height: 1.5;
 	}
+
+	nav {
+	background-color: "#535364";
+	}
 	
 	ol, ul {	
 	list-style: none;
