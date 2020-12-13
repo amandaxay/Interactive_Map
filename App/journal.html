@@ -43,21 +43,36 @@
   <br>
 
   <div class="createJournal" style="width:50%;">
-    <form action="entry.php" method="post">
-      <label>Title</label>
-      <textarea type="text" name="title" rows="4" cols="50">
-    </textarea>
-      <label>Description</label>
-      <textarea type="text" name="description" rows="10" cols="50">
-    </textarea>
-      <br>
-      <input type="submit">
+<!--    <form action="entry.php" method="post">-->
+<!--      <label>Title</label>-->
+<!--      <textarea type="text" name="title" rows="4" cols="50">-->
+<!--    </textarea>-->
+<!--      <label>Description</label>-->
+<!--      <textarea type="text" name="description" rows="10" cols="50">-->
+<!--    </textarea>-->
+<!--      <br>-->
+<!--      <input type="submit">-->
+<!--    </form>-->
+    <form method="post" action="journal.html" onsubmit="return storeValues(this);">
+      <label for="field1">Title :</label>
+      <textarea id="field1" rows="4" cols="50"></textarea>
+      <label for="field2">Description :</label>
+      <textarea id="field2" rows="10" cols="50"></textarea>
+      <span>
+        <input type="submit" value="Set Cookies">
+        <input type="button" onclick="clearCookies();" value="Clear Cookies">
+      </span>
     </form>
-  </div>
+  <script>
+    if(field1=getCookie("field1")){ document.myForm.field1.value=field1; }
+    if("field2" === getCookie("field2")){ document.getElementById("field2").value = "field2"; }
+  </script>
   <br>
   <br>
   <hr>
-
+</div>
+<div id="container" onload="display();">
+</div>
 </div>
 <br><br><br><br><br><br><br><br><br><br>
 
@@ -66,5 +81,7 @@
     cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
   </h5>
 </footer>
+
+<script src="journal.js"></script>
 </body>
 </html>

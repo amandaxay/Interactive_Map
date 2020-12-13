@@ -347,6 +347,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
+
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: gray;
@@ -422,129 +423,128 @@ ul {
 /*end tablet styles*/
 
 /* begin desktop styles */
-@media only screen and (min-width: 1001px){
-
-
-#grid-container {
-    grid-gap:0.5%;
+@media only screen and (min-width: 1001px) {
+  #grid-container {
+    grid-gap: 0.5%;
     color: black;
-    width:100%;
-}
+    width: 100%;
+  }
 
-#griddesign {
-	display: grid;
-	text-align: left;
-	grid-template-columns: 1fr;
-	grid-column-gap: 20%;
-	grid-gap:.50em;
-	padding: 6%;
-}
+  #griddesign {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20%;
+    grid-gap: .50em;
+    padding: 6%;
+  }
 
-#colgrid {
-	display: grid;
-	text-align: left;
-	grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:20px;
+  #colgrid {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     grid-column-gap: 25px;
     width: 100%;
-}
-
-/*--------------------------------------------------------------------*/
-
-/*----------------------LOGIN PAGE-------------------*/
-    /* Bordered form */
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
   }
-  .cancelbtn {
+}
+  /*--------------------------------------------------------------------*/
+  /*----------------------LOGIN PAGE-------------------*/
+  /* Bordered form */
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
     width: 100%;
   }
-}
-/*--------------------------------------------------------------------*/
 
-/*---------------------- TITLE -------------------*/
-
-#title{
-  posititon: relative;
-}
-.js-nametag{
-  position: absolute;
-}
-.js-nametag:nth-child(1){
-  animation-name: fade;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  animation-direction: alternate-reverse;
-}
-
-
-.js-nametag:nth-child(2){
-  animation-name: fade;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  animation-direction: alternate;
-}
-
-@keyframes fade{
-    0%,50% {
-      opacity: 0;
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
   }
-    100%{
+
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  /*--------------------------------------------------------------------*/
+  /*---------------------- TITLE -------------------*/
+  #title {
+    posititon: relative;
+  }
+
+  .js-nametag {
+    position: absolute;
+  }
+
+  .js-nametag:nth-child(1) {
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+  }
+
+
+  .js-nametag:nth-child(2) {
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+  }
+
+  @keyframes fade {
+    0%, 50% {
+      opacity: 0;
+    }
+    100% {
       opacity: 1;
+    }
   }
 }
