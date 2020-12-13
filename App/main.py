@@ -25,7 +25,7 @@ def home():
     #                             total_pages=total_pages, 
     #                             curr_page=page,
     #                             advanced=False)
-    return render_template('index.html') #if we arent given a query, render the landing page
+    return render_template('/landing.html') #if we arent given a query, render the landing page
 
 
 @app.route('/CAstatePage')
@@ -48,9 +48,9 @@ def contact():
 def journal():
     return render_template('/journal.html')
 
-@app.route('/landing')
+@app.route('/map')
 def signin():
-    return render_template('/landing.html')
+    return render_template('/index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
