@@ -19,6 +19,7 @@
 	line-height: 1.5;
 	}
 
+<<<<<<< HEAD:App/style.css
   button {
     margin-top: 20px;
     line-height: 60px;
@@ -33,6 +34,13 @@
   }
 
 	ol, ul {
+=======
+	nav {
+	background-color: "#535364";
+	}
+	
+	ol, ul {	
+>>>>>>> main:App/static/css/style.css
 	list-style: none;
 	}
 
