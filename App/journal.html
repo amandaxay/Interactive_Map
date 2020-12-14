@@ -53,35 +53,49 @@
 <!--      <br>-->
 <!--      <input type="submit">-->
 <!--    </form>-->
-    <form method="post" action="journal.html" onsubmit="return storeValues(this);">
-      <label for="field1">Title :</label>
-      <textarea id="field1" rows="4" cols="50"></textarea>
-      <label for="field2">Description :</label>
-      <textarea id="field2" rows="10" cols="50"></textarea>
-      <span>
-        <input type="submit" value="Set Cookies">
-        <input type="button" onclick="clearCookies();" value="Clear Cookies">
-      </span>
-    </form>
-  <script>
-    if(field1=getCookie("field1")){ document.myForm.field1.value=field1; }
-    if("field2" === getCookie("field2")){ document.getElementById("field2").value = "field2"; }
-  </script>
+    <div id = "journal">
+    <div class = "photo">
+      <img src = "http://placehold.it/140x100" id = "userImage">
+    </div>
+    <div class = "comments">
+      <label for="title">title:</label>
+      <textarea id = "title" cols = "60" rows = "2" placeholder = "Give your entry a title."></textarea>
+      <label for="content">entry:</label>
+      <textarea id = "content" cols = "60" rows = "4" placeholder = "Enter your journal entry."></textarea>
+      <button id = "submit" onclick = "isEmpty();clearDiv();">Submit</button>
+    </div>
+    </div>
   <br>
   <br>
   <hr>
-</div>
-<div id="container" onload="display();">
-</div>
-</div>
-<br><br><br><br><br><br><br><br><br><br>
+    <div id = "entries">
+      <div style="border:2px solid white; border-bottom:2px solid black; width:50%" id="container">
+      <h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Journal Entries</h3>
+    </div>
+      <ul style="display:flex;">
+        <div id = "comment-feed">
+          <h2 id = "titleoutput"></h2>
+          <p id = "entry">
+          </p>
+        </div>
+      </ul>
+    </div>
+<br><br><br><br>
 
+  </div>
+</div>
 <footer>
   <h5>
     cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
   </h5>
 </footer>
-
 <script src="journal.js"></script>
 </body>
+
+<!--  function get(){-->
+<!--    localStorage.getItem("storedItem");-->
+<!--    document.getElementById("openedText").innerHTML = storedItem + " OPENED";-->
+<!--  }-->
+
+<!--</script>-->
 </html>
