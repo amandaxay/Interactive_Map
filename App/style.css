@@ -134,6 +134,11 @@ img {
   color:white;
 }
 
+#alignsubmit {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .lateimg {
   animation-name:late-img-ani;
   animation-duration: 3s;
