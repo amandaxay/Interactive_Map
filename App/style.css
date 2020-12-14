@@ -109,6 +109,11 @@ img {
 	max-width: 100%;
 }
 
+#alignsubmit {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .logoimg {
 /*  width: 10px;
   height: 10px;
