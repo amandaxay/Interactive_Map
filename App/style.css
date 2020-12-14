@@ -124,6 +124,16 @@ img {
   animation-timing-function: ease-in;
 }
 
+#titleoutput {
+  font-size:1px;
+  color:white;
+}
+
+#paragraph {
+  font-size:1px;
+  color:white;
+}
+
 .lateimg {
   animation-name:late-img-ani;
   animation-duration: 3s;

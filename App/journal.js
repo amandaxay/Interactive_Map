@@ -4,22 +4,32 @@ String.prototype.isEmpty = function(){
 
 
 var guestMessages = {
-  title: [],
-  msgs: [],
+  // entry = title + msgs
+  entry: [],
+  title: "",
+  msgs: "",
 
   getMessages: function(msg){
-    this.title.push(value1 + "<br>");
-    this.msgs.push("<br>"+ value);
+    this.title = value1 + "<br>";
+    this.msgs = "<h6 style='font-size:20px; padding-left:30px;'>" + value + "</h6>" + "<br>";
+    this.entry.push(this.title + this.msgs);
   },
 
   printMessages: function(){
     guestMessages.getMessages();
-    var showTitle = document.getElementById("titleoutput").innerHTML = this.title.join(" ");
-    var showEntry = document.getElementById("entry").innerHTML = this.msgs.join(" ");
-  }
+
+    var showTitle = document.getElementById("titleoutput").innerHTML = this.title;
+    var showEntry = document.getElementById("paragraph").innerHTML = this.msgs;
+
+    var show = document.getElementById("entry").innerHTML = this.entry.join(" ");
+
+
+    console.log(guestMessages.entry);
+    console.log(guestMessages.title);
+    console.log(guestMessages.msgs);
+  },
 };
 
-//console.log(keepmsgs);
 
 var getEntry = function(){
   value1 = document.getElementById("title").value;
@@ -35,8 +45,8 @@ var clearDiv = function(){
 
 var isEmpty = function(entry){
   entry = getEntry();
-  var output = document.getElementById("content").value;
-  var output2 = document.getElementById("title").value;
+  var output = document.getElementById("title").value;
+  var output2 = document.getElementById("content").value;
   if ( output === '' || output2 === '' ){
     alert("Incomplete fields! Fill in all boxes");
   }
