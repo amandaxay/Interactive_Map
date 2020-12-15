@@ -1,20 +1,18 @@
-<<<<<<< HEAD:App/templates/index.html
-<!<!DOCTYPE html> 
-=======
 <!DOCTYPE html> 
->>>>>>> 7dc47ad3d0f22b74161219ed2756d5ccd1d9df09:App/index.html
 <html lang="en"> 
 
 <head>
- 	<title>InMap</title>
-	<link rel="icon" type="image/png" href="img/photo3.png" />
- 	<meta charset="utf-8">
+	 <title>InMap</title>
+	 <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+	 <meta charset="utf-8">
+	 <!--link rel="icon" type="image/png" href="img/photo3.png" />
+ 	
  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"-->
 		<!-- Aileron bold -->
-	<link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<!--link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"-->
 <!-- -->
 </head>
 <body>
@@ -32,10 +30,10 @@
 	<br>-->
 	<nav> 
 		<ul> 
-			<li><a href="index.html">home</a></li>
-			<li><a href="journal.html">journal</a></li>
-			<li><a href="contact.html">report a bug</a></li>
-			<li><a href="landing.html">sign out</a></li>
+			<li><a href="map">home</a></li>
+			<li><a href="journal">journal</a></li>
+			<li><a href="contact">report a bug</a></li>
+			<li><a href="/">sign out</a></li>
 		</ul>
 	</nav>
 	</header>
@@ -47,9 +45,11 @@
 		<script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
 		<script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" type="text/javascript"></script>
 		<script src="https://www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
-<div id="mapdiv" style=" width: 1000px; height: 500px;"></div>
+<!--div id="mapdiv" style=" width: 1000px; height: 500px;"></div-->
+<div id="mapdiv" style=" width: 1000px; height: 500px;"><iframe src="https://createaclickablemap.com/map.php?&id=98564&maplocation=false&online=true" width="900" height="525" style="border: none;"></iframe>
+	<script>if (window.addEventListener){ window.addEventListener("message", function(event) { if(event.data.length >= 22) { if( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } else if (window.attachEvent){ window.attachEvent("message", function(event) { if( event.data.length >= 22) { if ( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } </script></div>
 
-<script type="text/javascript">
+<!--script type="text/javascript">
 var map = AmCharts.makeChart("mapdiv",{
 type: "map",
 theme: "light",
@@ -75,7 +75,7 @@ rollOverColor : "#9EC2F7",
 rollOverOutlineColor : "#000000"
 }
 });
-</script>
+</script-->
 
 	<br>
 	<br>
@@ -91,8 +91,4 @@ rollOverOutlineColor : "#000000"
 	</h5>
 </footer>
 </body>
-<<<<<<< HEAD:App/templates/index.html
 </html>
-=======
-</html>
->>>>>>> 7dc47ad3d0f22b74161219ed2756d5ccd1d9df09:App/index.html
