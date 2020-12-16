@@ -7,7 +7,8 @@ The user will be able to create a journal entry about their experience at the de
 
 # How to run
 * install python, instructions found here: https://docs.python.org/3/using/windows.html
-* install flask using ```pip install Flask``` in the command prompt
+* install flask using ```pip install Flask``` in the command prompt. If this does not work, you may need
+    to try ```sudo apt install flask``` or search for how to install flask on whichever terminal you're using.
 * locate the project folder in a terminal and run ```python3 main.py```
 * Type in a web browser: http://localhost:5000
 * The sign in page should be displayed, type in username and password, both can be anything, and submit.
