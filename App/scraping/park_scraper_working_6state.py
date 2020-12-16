@@ -36,11 +36,11 @@ for state in list: #Remember to update the number of pages
     soup = BeautifulSoup(response.text, 'html.parser')
     #image_wrap_data = soup('img', class_='col-md-12 col-sm-12 col-xs-6 noPadding stateThumbnail')
     for i in soup.find_all('li', class_='clearfix'):
-        if i.find('div', class_='col-md-12 col-sm-12 col-xs-6 noPadding stateThumbnail') == None:
+        if i.find('img', class_='stateResultImage') == None:
             image = 'None'
-        if (image !='None'):
-                image = i.find('div', class_='col-md-12 col-sm-12 col-xs-6 noPadding stateThumbnail').find('img')['src']
-                image = '<img src=https://www.nps.gov/'+image+'></img>'
+        else:
+            image = i.find('div', class_='col-md-12 col-sm-12 col-xs-6 noPadding stateThumbnail').find('img')['src']
+            image = '<img src=https://www.nps.gov/'+image+'></img>'
         if i.find('div', class_='col-md-9 col-sm-9 col-xs-12 table-cell list_left') == None:
             break
         park=i.find('div', class_='col-md-9 col-sm-9 col-xs-12 table-cell list_left').find('h3').text.strip()
