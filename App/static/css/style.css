@@ -1,9 +1,10 @@
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, 
-	abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, 
-	strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, 
+	abbr, acronym, address, big, cite, code,del, dfn, em, ins, kbd, q, s, samp,small, strike, 
+	strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, 
 	caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, 
 	footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	
+		/*Removed table and img from this list ^*/
 	margin: 0;	
 	padding: 0;	
 	border: 0;	
@@ -11,8 +12,83 @@
 	font: inherit;	
 	vertical-align: baseline;}
 
+	/* img {
+		max-width: 100%;
+	} */
+
+	th {
+		text-align: left;
+	}
+
+	table, th, td {
+		border: 1px solid #000;
+		/*border-collapse: collapse;*/
+	}
+
+	td.img {
+		/*vertical-align: middle;*/
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* table {	
+		border-collapse: collapse;	border-spacing: 0;
+		}	 */
+	/*Adding for table*/
+
+	/*Adding flexbox container*/
+	.main {
+		/*border: 2px solid brown;*/
+		display: flex;
+		justify-content: center;
+		justify-content: space-between;
+
+		width: 95%;
+		/*	border:2px solid lightgray;*/
+		max-width: 2000px;
+		margin: 10px auto;
+		background-color:white;
+	}
+
+	.nationalPark {
+		border: 1px solid black;
+		justify-content: flex-end; 
+    	align-items: center;
+    	display: flex;
+    	flex-direction: row;
+	}
+
+	.nameAndImg {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-left: 1%;
+	}
+
+	.image {
+		display: flex;
+		justify-content: center;
+		padding-top: 15%;
+		padding-bottom: 5%;
+	}
 	
-	
+	/*Amanda's*/
+	#titleoutput {
+		font-size:1px;
+		color:white;
+	}
+	  
+	#paragraph {
+		font-size:1px;
+		color:white;
+	}
+	  
+	#alignsubmit {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+
 	/* HTML5 display-role reset for older browsers */
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	
 	display: block;}
@@ -36,11 +112,7 @@
 	blockquote:before, blockquote:after,q:before, q:after {	
 	content: '';	
 	content: none;
-	}
-	
-	table {	
-	border-collapse: collapse;	border-spacing: 0;
-	}	 
+	} 
 	
 	/* end reset*/
 
@@ -84,7 +156,7 @@ a:link, a:visited {
 }
     
 a:hover, a:focus { 
-    color: white;
+    color: blue;
 }
 
 /* end nav bar */ 
@@ -98,32 +170,28 @@ body {
 	background-color: white;
 }
 
-img {
-	max-width: 100%;
-}
-
-.logoimg {
+/* .logoimg {
 /*  width: 10px;
   height: 10px;
-  margin: 0 auto;*/
+  margin: 0 auto;
   animation-name:img-ani;
   animation-duration: 4s;   
   animation-timing-function: ease-in;
-}      
+}       */
 
-.by {
+/* .by {
   animation-name:img-ani;
   animation-duration: 3.5s;   
   animation-timing-function: ease-in;
-}
+} */
 
-.lateimg {
+/* .lateimg {
   animation-name:late-img-ani;
   animation-duration: 3s;   
   animation-timing-function: ease-in;
-}       
+}        */
 
-@keyframes img-ani {
+/* @keyframes img-ani {
   from{opacity:0;}
   to{opacity: 1;}
 }
@@ -131,7 +199,7 @@ img {
 @keyframes late-img-ani {
   from{opacity:0;}
   to{opacity: 1;}
-}
+} */
 
 #fbads {
 	margin: 0 auto;
@@ -227,11 +295,11 @@ footer {
 }
 
 
-#description > #container img {
+/* #description > #container img {
 	max-width:1100px; 
 	margin-left: auto; 
 	margin-right:auto;
-}
+} */
 
 #container {
 	padding:10px;
@@ -259,16 +327,16 @@ footer {
 	grid-gap: 30px;
 }
 
-#griddesign img {
+/* #griddesign img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;	
-}
+} */
 
-#griddesign a:hover img {
+/* #griddesign a:hover img {
 	opacity: 0.5;
-}
+} */
 
 
 #grid-container {
@@ -297,13 +365,13 @@ footer {
     font-size: 30px;
 }
 
-#grid-container > div > img {
+/* #grid-container > div > img {
 	text-align: center;
 	display: block;
     width: 80%;
     height: 60%;
     object-fit: cover;
-} 
+}  */
 
 
 #meet {
@@ -503,7 +571,7 @@ span.psw {
 /*---------------------- TITLE -------------------*/
 
 #title{
-  posititon: relative;
+  position: relative;
 }
 .js-nametag{
   position: absolute;  
@@ -528,8 +596,8 @@ span.psw {
 @keyframes fade{
     0%,50% {
       opacity: 0;
-}
+	}
     100%{
       opacity: 1;
-  }
+  	}
 }
