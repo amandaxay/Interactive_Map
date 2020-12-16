@@ -1,21 +1,29 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>InMap</title>
-	<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
-	<meta charset="utf-8">
-	<!--link rel="icon" type="image/png" href="img/photo3.png" />
-		
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"-->
-	   <!-- Aileron bold -->
-   <!--link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"-->
-<!-- -->
+  <title>InMap</title>
+  <link rel="icon" type="image/png" href="img/photo3.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <!-- Aileron bold -->
+  <link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <!-- -->
+  <style>
+    img{
+      max-width:180px;
+    }
+    input[type=file]{
+      padding:10px;
+      background:white;}
+  </style>
 </head>
 <body>
+
+
 <div id="wrapper">
 	<header>
 <!-- put logo here if we want one -->
@@ -49,14 +57,63 @@
 
 		<img style="height:100%; width:100%" src="../static/img/journalPage.png" alt="trey"><br>
 
+  <div class="createJournal" style="width:50%;">
+    <div id = "journal">
+    <div class = "comments">
+      <label for="title">title:</label>
+      <textarea id = "title" cols = "60" rows = "2" placeholder = "Give your entry a title."></textarea>
+      <label for="content">entry:</label>
+      <textarea id = "content" cols = "60" rows = "4" placeholder = "Enter your journal entry."></textarea>
+      <div id="alignsubmit">
+      <form action=" ">
+        <input type="file" id="myFile" name="filename">
+      </form>
+      <button id = "submit" onclick = "isEmpty();clearDiv();">Submit</button></div>
+    </div>
+    </div>
+  <br>
+  <br>
+  <hr>
+    <div id = "entries">
+      <div style="border:2px solid white; border-bottom:2px solid black; width:50%" id="container">
+      <h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Journal Entries</h3>
+    </div>
+      <ul style="display:block;">
+        <li id="entry">
+        </li>
+      </ul>
+    </div>
+    <h2 style="color:white;" id = "titleoutput"></h2>
+    <p style="color:white;" id = "paragraph"></p>
+    <br><br><br><br>
+  </div>
 </div>
-
-
 <footer>
-	<h5>
-		cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
-	</h5>
+  <h5>
+    cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
+  </h5>
 </footer>
+<script src="journal.js"></script>
+<script>
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
+    reader.onload = function (e) {
+      $('#blah')
+          .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
 </body>
+
+<!--  function get(){-->
+<!--    localStorage.getItem("storedItem");-->
+<!--    document.getElementById("openedText").innerHTML = storedItem + " OPENED";-->
+<!--  }-->
+
+<!--</script>-->
 </html>
