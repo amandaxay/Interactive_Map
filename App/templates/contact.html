@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head>
+	<title>InMap</title>
+	<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+	<meta charset="utf-8">
+
+	
+
+	<!--link rel="icon" type="image/png" href="img/photo3.png" /-->
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	   <!-- Aileron bold -->
+   <link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<!-- -->
+</head>
+<body>
+
+<div id="wrapper">
+	<header>
+		<!-- put logo here if we want one -->
+	<!-- 	<div id="logo">
+		<br>
+		<figure>
+			<a href="index.html">
+				<img id="center" src="img/chopblock.png" alt="logo">
+			</a>
+		</figure>
+	</div> 
+	<br>-->
+	<nav> 
+		<ul> 
+			<li><a href="map">home</a></li>
+			<li><a href="journal">journal</a></li>
+			<li><a href="contact">report a bug</a></li>
+			<li><a href="/">sign out</a></li>
+		</ul>
+	</nav>
+	</header>
+<!-- 	<div id="center"><img src="img/chopblock.png" alt="logo"></div> --><!-- <h1>Meet the team</h1> -->
+	<div style="width:30%; border:2px solid white; border-bottom:2px solid black" id="container">
+			<h3 style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">Team</h3></div>
+	<br><br>
+	<div id="meet">
+		<div id="colgrid">
+			<div id="grid-container">
+				<h2  style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">amanda<br> souriyamath</h2>
+				<img style="height:120px; width:120px" src="../static/img/amanda.png" alt="amanda"><br>
+				<p style="text-align: center; font-weight: 100px;">web design + development<br>product design.</p><br>
+			</div>
+			<div id="grid-container">
+				<h2  style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">laura<br>  messick</h2>
+				<img style="height:120px; width:120px" src="../static/img/laura.png" alt="laura"><br>
+				<p style="text-align: center; font-weight: 100px;">product idea + design.<br>web scraping/API.<br></p><br>
+			</div>
+			<div id="grid-container">
+				<h2  style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal;">trey <br>fontaine</h2>
+				<img style="height:120px; width:120px" src="../static/img/trey.png" alt="trey"><br>
+				<p style="text-align: center; font-weight: 100px;">product design + development.<br>web scraping/API.<br></p><br>
+			</div>
+		</div>
+		<hr>
+	<br><br><br>
+
+
+	<div class="formcontainer">
+		<h1  style="font-family: aileron, sans-serif; font-weight: 700; font-style: normal; font-size:40px">Report a bug</h1>
+  	<form action="thankyou.html">
+<!-- 
+    <label for="fname">first</label> -->
+    <input type="text" id="fname" name="firstname" placeholder="first name">
+<!-- 
+    <label for="lname">last name</label> -->
+    <input type="text" id="lname" name="lastname" placeholder="last name">
+
+<!-- 
+    <label for="lname">email</label> -->
+    <input type="text" id="email" name="email" placeholder="email">
+
+    <label style="font-size: 22px" for="subject">message</label>
+    <textarea id="subject" name="subject" placeholder="write us... anything!" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  	</form>
+	</div>
+
+
+	</div>
+
+</div>
+<br><br><br><br><br><br><br>
+
+<footer>
+	<h5>
+		cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
+	</h5>
+</footer>
+
+</body>
+</html>
