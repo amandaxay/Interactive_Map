@@ -27,7 +27,7 @@ database5=[]
 
 list=['WA','CA','OR','NY','FL','PA']
 
-for state in list: #Remember to update the number of pages
+for state in list: 
     print("scraping page " + str(state) + "...")
     url = 'https://www.nps.gov/state/'+state+'/index.htm'
     user_agent = {'User-agent': 'Mozilla/5.0'}
