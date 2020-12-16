@@ -49,6 +49,8 @@
 		max-width: 2000px;
 		margin: 10px auto;
 		background-color:white;
+		padding-top: 5px;
+		padding-bottom: 10px;
 	}
 
 	.nationalPark {
