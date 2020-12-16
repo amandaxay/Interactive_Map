@@ -49,16 +49,14 @@
 		max-width: 2000px;
 		margin: 10px auto;
 		background-color:white;
-		padding-top: 5px;
-		padding-bottom: 10px;
 	}
 
 	.nationalPark {
 		border: 1px solid black;
 		justify-content: flex-end; 
-    	align-items: center;
-    	display: flex;
-    	flex-direction: row;
+    		align-items: center;
+    		display: flex;
+    		flex-direction: row;
 	}
 
 	.nameAndImg {
@@ -99,6 +97,21 @@
 	line-height: 1.5;
 	}
 
+	/*Amanda's add*/
+	button {
+    	  margin-top: 20px;
+  	  line-height: 60px;
+   	  font-weight: bold;
+    	  padding: 0 40px;
+    	  background: salmon;
+    	  border: none;
+  	}
+
+  	button:hover {
+    	  background: lightblue;
+  	}
+
+
 	nav {
 	background-color: "#535364";
 	}
@@ -115,6 +128,10 @@
 	content: '';	
 	content: none;
 	} 
+
+	table {
+		border-collapse: collapse;	border-spacing: 0;
+	}
 	
 	/* end reset*/
 
@@ -172,6 +189,17 @@ body {
 	background-color: white;
 }
 
+/*Amanda's add*/
+	img {
+		max-width: 100%;
+	}
+
+	#alignsubmit {
+  		display: grid;
+  		grid-template-columns: 2fr 1fr;
+	}
+
+
 /* .logoimg {
 /*  width: 10px;
   height: 10px;
@@ -186,6 +214,18 @@ body {
   animation-duration: 3.5s;   
   animation-timing-function: ease-in;
 } */
+
+/*Amanda's add*/
+	#titleoutput {
+  		font-size:1px;
+  		color:white;
+	}
+
+	#paragraph {
+ 		 font-size:1px;
+ 		 color:white;
+	}
+
 
 /* .lateimg {
   animation-name:late-img-ani;
@@ -213,7 +253,7 @@ body {
 }
 
 #wrapper {
-	padding-top: 60px;
+	padding-top: 80px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 45px;
 }
@@ -229,6 +269,14 @@ body {
 	max-width: 1000px;
 	margin: 20px auto;
 	background-color:white;
+}
+
+.createJournal {
+  width: 90%;
+  /*	border:2px solid lightgray;*/
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color:white;
 }
 
 #colgrid {
@@ -595,11 +643,12 @@ span.psw {
   animation-direction: alternate;
 }
 
-@keyframes fade{
-    0%,50% {
-      opacity: 0;
+    @keyframes fade{
+        0%,50% {
+          opacity: 0;
 	}
-    100%{
-      opacity: 1;
+        100%{
+          opacity: 1;
   	}
+    }
 }

@@ -40,6 +40,18 @@ def ORstate():
 def WAstate():
     return render_template('/WAstatePage.html')
 
+@app.route('/PAstatePage')
+def PAstate():
+    return render_template('/PAstatePage.html')
+
+@app.route('/NYstatePage')
+def NYstate():
+    return render_template('/NYstatePage.html')
+
+@app.route('/FLstatePage')
+def FLstate():
+    return render_template('/FLstatePage.html')
+
 @app.route('/contact')
 def contact():
     return render_template('/contact.html')
@@ -51,6 +63,7 @@ def journal():
 @app.route('/map')
 def signin():
     return render_template('/index.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
