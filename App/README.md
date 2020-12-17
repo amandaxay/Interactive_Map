@@ -12,6 +12,8 @@ The user will be able to create a journal entry about their experience at the de
 * locate the project folder in a terminal and run ```python3 main.py```
 * Type in a web browser: http://localhost:5000
 * The sign in page should be displayed, type in username and password, both can be anything, and submit.
+* Only 6 states have been implemented. CA, FL, NY, OR, PA, and WA. If you click on another state that has not
+    been implemented, it will take you to a URL not found page.
 * The journal1.html file displays our working journal page and should be clicked on only when you have
     exited out of the main.py program.
 
