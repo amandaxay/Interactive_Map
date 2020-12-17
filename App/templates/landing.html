@@ -4,15 +4,6 @@
     <title>InMap</title>
     <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
     <meta charset="utf-8">
-    <!--link rel="icon" type="image/png" href="img/photo3.png" />
-      
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"-->
-       <!-- Aileron bold -->
-     <!--link rel="stylesheet" href="https://use.typekit.net/ayz5cua.css">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"-->
-  <!-- -->
 <style>
 #title{
   position: relative;
@@ -60,6 +51,34 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+a:hover, a:focus { 
+    color: white;
+}
+
+ul {
+	display: block; 
+	list-style-type: circle; 
+	margin-top: 1em; 
+	margin-bottom: 1 em; 
+	margin-left: 0; 
+	margin-right: 0; 
+	padding-left: 40px;
+}
+
+ol {
+	display: block;
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+li {
+	display: list-item;
 }
 
 button {
@@ -116,26 +135,6 @@ span.psw {
 <body>
 
 <div id="wrapper">
-	<header>
-<!-- put logo here if we want one -->
-	<!-- 	<div id="logo">
-		<br>
-		<figure>
-			<a href="index.html">
-				<img id="center" src="img/chopblock.png" alt="logo">
-			</a>
-		</figure>
-	</div> 
-	<br>-->
-<!-- 	<nav> 
-		<ul> 
-			<li><a href="index.html">home</a></li>
-			<li><a href="journal.html">journal</a></li>
-			<li><a href="contact.html">report a bug</a></li>
-			<li id="signout"><a href="sign out.html">sign out</a></li>
-		</ul>
-	</nav> -->
-	</header>
 
 	<div id="title" style="font-family: aileron, sans-serif; font-weight: 200; font-style: normal;">    
 		<h2 class="js-nametag">Welcome</h2>
@@ -143,16 +142,14 @@ span.psw {
 	</div>
 	<br>
 	<div id="container">
-  <!--form action="/map" method="post"-->
+
   <form action="/map" method="GET">
-    	  <div class="container">
 		    <label for="uname"><b>Username:</b></label>
 		    <input type="text" placeholder="Enter Username" name="uname" required>
 		    <br>
 		    <label for="psw"><b>Password:</b></label>
 		    <input type="password" placeholder="Enter Password" name="psw" required>
 		    <button type="submit">Login</button>
-  		</div>
 	</form>
 	<br>
 	<hr>
@@ -162,6 +159,27 @@ span.psw {
       <h3>What we're about.</h3>
     </div>
     <p>A journal application where you can log the states you’ve traveled to and the cities, national parks, state parks, and other points of interests. The map will be interactive by showing a map of the united states, each state will be clickable to let users log journal entries allowing them to input their journal entry and can select points of interest based on pre-uploaded pictures on the map. The user will be able to create a journal entry about their experience at the desired location and optionally upload a few of their favorite pictures.</p>
+    <p>You can find our project repo on <a style="color:blue" href="https://www.github.com/amandaxay/Interactive_Map" target="_blank">github</a></p>
+    <div style="width:30%; border:2px solid white; border-bottom:2px solid black" id="landing">
+      <h3>How to use InMap.</h3>
+    </div>
+    <p>Simply sign-in using any username and password, and start clicking on states to view their points of interest. On each state page you should find:
+    </p>
+    	<ul style="font-size:23px; padding-left: 100px;">
+    		<li>POI marker on the state map</li>
+    		<li>Names of the POI</li>
+    		<li>Description of the POI</li>
+    		<li>Images of the POI</li>
+    	</ul>  
+    <p>To create a journal entry:</p>
+	    <ol style="font-size:23px; padding-left: 100px;">
+	    	<li>Must enter a title and entry</li>
+	    	<li>Optional picture upload (in development)</li>
+	    	<li>Must hit submit</li>
+	    </ol>  
+    <p>
+    	A contact page is available for users to submit any questions or concerns about our application. For now, the contact method is by email and will automatically fill in an email for the user when they hit submit. 
+    </p>
   </div>
 </div>
 <br><br><br><br><br><br><br>
